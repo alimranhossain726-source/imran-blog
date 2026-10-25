@@ -19,83 +19,88 @@
         
         /* Header & Nav */
         header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
-        .top-bar { background: var(--dark); color: #fff; padding: 6px 20px; font-size: 13px; display: flex; justify: space-between; align-items: center; }
+        .top-bar { background: var(--dark); color: #fff; padding: 8px 15px; font-size: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px; }
         .top-bar .admin-btn { background: var(--accent); color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
-        .logo { font-size: 28px; font-weight: 800; color: var(--primary); }
+        
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; flex-wrap: wrap; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
         .logo span { color: var(--accent); }
-        nav ul { display: flex; list-style: none; gap: 20px; }
-        nav a { font-weight: 600; color: #444; transition: 0.3s; }
+        
+        nav ul { display: flex; list-style: none; gap: 12px; flex-wrap: wrap; margin-top: 5px; }
+        nav a { font-weight: 600; color: #444; font-size: 14px; transition: 0.3s; }
         nav a:hover, nav a.active { color: var(--primary); }
 
         /* Ad Slots */
-        .ad-box { background: #e9ecef; border: 2px dashed #adb5bd; text-align: center; padding: 15px; margin: 20px auto; border-radius: 6px; color: #6c757d; font-size: 14px; font-weight: bold; }
-        .ad-header { max-width: 970px; min-height: 90px; }
-        .ad-sidebar { min-height: 250px; }
-        .ad-in-article { min-height: 100px; margin: 25px 0; }
-        .ad-footer { max-width: 970px; min-height: 90px; }
+        .ad-box { background: #e9ecef; border: 2px dashed #adb5bd; text-align: center; padding: 12px; margin: 15px auto; border-radius: 6px; color: #6c757d; font-size: 13px; font-weight: bold; }
+        .ad-header { max-width: 970px; min-height: 70px; }
+        .ad-sidebar { min-height: 220px; }
+        .ad-in-article { min-height: 90px; margin: 20px 0; }
+        .ad-footer { max-width: 970px; min-height: 70px; }
 
         /* Layout */
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: 2.8fr 1.2fr; gap: 30px; }
+        .container { max-width: 1200px; margin: 15px auto; padding: 0 15px; display: grid; grid-template-columns: 2.8fr 1.2fr; gap: 20px; }
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+        }
+        
         .main-content { background: transparent; }
-        .sidebar { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: fit-content; }
+        .sidebar { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: fit-content; }
 
         /* Banner */
-        .hero { background: linear-gradient(rgba(0,119,182,0.8), rgba(29,53,87,0.8)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 60px 20px; border-radius: 12px; margin-bottom: 25px; }
-        .hero h1 { font-size: 38px; margin-bottom: 10px; }
-        .hero p { font-size: 18px; opacity: 0.9; }
+        .hero { background: linear-gradient(rgba(0,119,182,0.8), rgba(29,53,87,0.8)), url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 40px 15px; border-radius: 10px; margin-bottom: 20px; }
+        .hero h1 { font-size: 28px; margin-bottom: 8px; }
+        .hero p { font-size: 15px; opacity: 0.9; }
 
         /* Blog Post Cards */
-        .post-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 25px; transition: 0.3s; }
-        .post-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .post-img { width: 100%; height: 260px; object-fit: cover; }
-        .post-body { padding: 25px; }
-        .post-meta { font-size: 13px; color: #777; margin-bottom: 10px; display: flex; gap: 15px; }
-        .post-meta span { background: #e0f2fe; color: var(--primary); padding: 3px 8px; border-radius: 4px; font-weight: 600; }
-        .post-title { font-size: 24px; color: var(--dark); margin-bottom: 12px; }
-        .post-excerpt { color: #555; margin-bottom: 15px; }
-        .read-more-btn { display: inline-block; background: var(--primary); color: white; padding: 8px 18px; border-radius: 4px; font-weight: 600; }
+        .post-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px; }
+        .post-img { width: 100%; height: 220px; object-fit: cover; }
+        .post-body { padding: 18px; }
+        .post-meta { font-size: 12px; color: #777; margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .post-meta span { background: #e0f2fe; color: var(--primary); padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .post-title { font-size: 20px; color: var(--dark); margin-bottom: 10px; }
+        .post-excerpt { color: #555; margin-bottom: 12px; font-size: 14px; }
+        .read-more-btn { display: inline-block; background: var(--primary); color: white; padding: 6px 14px; border-radius: 4px; font-weight: 600; font-size: 14px; }
 
         /* Full Post View */
-        .post-detail { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        .post-detail h1 { font-size: 32px; color: var(--dark); margin-bottom: 15px; }
-        .post-detail img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin: 20px 0; }
-        .post-detail p { margin-bottom: 16px; font-size: 16px; color: #333; line-height: 1.8; }
-        .post-detail h2 { font-size: 22px; color: var(--primary); margin: 25px 0 10px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
-        .post-detail ul { margin: 10px 0 20px 25px; }
-        .post-detail li { margin-bottom: 8px; }
+        .post-detail { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .post-detail h1 { font-size: 24px; color: var(--dark); margin-bottom: 12px; }
+        .post-detail img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; margin: 15px 0; }
+        .post-detail p { margin-bottom: 14px; font-size: 15px; color: #333; line-height: 1.7; }
+        .post-detail h2 { font-size: 19px; color: var(--primary); margin: 20px 0 8px 0; border-left: 3px solid var(--primary); padding-left: 8px; }
+        .post-detail ul { margin: 8px 0 15px 20px; font-size: 15px; }
+        .post-detail li { margin-bottom: 6px; }
 
         /* Interactive Elements */
-        .post-actions { display: flex; gap: 20px; align-items: center; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 15px 0; margin: 25px 0; }
-        .like-btn { background: #ffe5e5; color: var(--accent); border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; }
-        .star-rating { display: flex; gap: 5px; cursor: pointer; color: #ffb703; font-size: 20px; }
+        .post-actions { display: flex; gap: 15px; align-items: center; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 12px 0; margin: 20px 0; flex-wrap: wrap; }
+        .like-btn { background: #ffe5e5; color: var(--accent); border: none; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 13px; }
+        .star-rating { display: flex; gap: 4px; cursor: pointer; color: #ffb703; font-size: 18px; }
         
         /* Comments */
-        .comments-section { margin-top: 30px; }
-        .comment-input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 10px; font-family: inherit; }
-        .comment-btn { background: var(--dark); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
-        .comment-list { margin-top: 20px; }
-        .comment-item { background: #f8f9fa; padding: 12px 15px; border-radius: 6px; margin-bottom: 10px; font-size: 14px; }
+        .comments-section { margin-top: 25px; }
+        .comment-input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 8px; font-family: inherit; font-size: 14px; }
+        .comment-btn { background: var(--dark); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .comment-list { margin-top: 15px; }
+        .comment-item { background: #f8f9fa; padding: 10px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; }
 
         /* Modal / Admin */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; }
-        .modal-content { background: white; padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; }
-        .modal-content input, .modal-content textarea, .modal-content select { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; padding: 15px; }
+        .modal-content { background: white; padding: 20px; border-radius: 8px; width: 100%; max-width: 450px; max-height: 90vh; overflow-y: auto; }
+        .modal-content input, .modal-content textarea, .modal-content select { width: 100%; padding: 9px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
 
         /* Footer */
-        footer { background: var(--dark); color: white; padding: 40px 20px 20px 20px; margin-top: 50px; text-align: center; }
-        .footer-ad-link { display: inline-block; background: #25d366; color: white; padding: 10px 20px; border-radius: 25px; font-weight: bold; margin-bottom: 20px; text-decoration: none; }
-        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
-        .footer-links a { color: #ccc; font-size: 14px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 13px; color: #888; }
+        footer { background: var(--dark); color: white; padding: 30px 15px 15px 15px; margin-top: 40px; text-align: center; }
+        .footer-ad-link { display: inline-block; background: #25d366; color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; margin-bottom: 15px; text-decoration: none; font-size: 13px; }
+        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; font-size: 13px; }
+        .footer-links a { color: #ccc; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; font-size: 12px; color: #888; }
     </style>
 </head>
 <body>
 
     <!-- Top Notice Bar -->
     <div class="top-bar">
-        <div>Welcome to Imran Blog - International Travel Guides & Tips</div>
-        <button class="admin-btn" onclick="openAdminModal()">Admin Panel Login</button>
+        <div>Welcome to Imran Blog - International Travel Guides</div>
+        <button class="admin-btn" onclick="openAdminModal()">Admin Login</button>
     </div>
 
     <!-- Main Navigation -->
@@ -106,17 +111,17 @@
                 <ul>
                     <li><a href="#" onclick="showCategory('all')" class="active">Home</a></li>
                     <li><a href="#" onclick="showCategory('Destinations')">Destinations</a></li>
-                    <li><a href="#" onclick="showCategory('Travel Guides')">Travel Guides</a></li>
-                    <li><a href="#" onclick="showCategory('Budget Travel')">Budget Travel</a></li>
-                    <li><a href="#" onclick="showCategory('Food & Culture')">Food & Culture</a></li>
-                    <li><a href="#" onclick="showCategory('Travel Tips')">Travel Tips</a></li>
+                    <li><a href="#" onclick="showCategory('Travel Guides')">Guides</a></li>
+                    <li><a href="#" onclick="showCategory('Budget Travel')">Budget</a></li>
+                    <li><a href="#" onclick="showCategory('Food & Culture')">Food</a></li>
+                    <li><a href="#" onclick="showCategory('Travel Tips')">Tips</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Ad Slot 1: Header Banner -->
-    <div class="ad-box ad-header">[ Ad Placeholder #1 - Header Banner (728x90 / Native) ]</div>
+    <!-- Ad Slot 1 -->
+    <div class="ad-box ad-header">[ Ad Placeholder #1 - Header Banner (728x90) ]</div>
 
     <!-- Main Content Layout -->
     <div class="container">
@@ -128,13 +133,13 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <h3>About Imran Blog</h3>
-            <p style="font-size: 14px; color: #666; margin: 10px 0 20px 0;">Exploring world destinations, budget itineraries, authentic food, and comprehensive travel guides for global readers.</p>
+            <p style="font-size: 13px; color: #666; margin: 8px 0 15px 0;">Exploring world destinations, budget itineraries, authentic food, and comprehensive travel guides.</p>
             
-            <!-- Ad Slot 2: Sidebar Top -->
-            <div class="ad-box ad-sidebar">[ Ad Placeholder #2 - Sidebar Rectangle (300x250) ]</div>
+            <!-- Ad Slot 2 -->
+            <div class="ad-box ad-sidebar">[ Ad Placeholder #2 - Sidebar (300x250) ]</div>
 
-            <h3 style="margin-top: 25px;">Popular Categories</h3>
-            <ul style="list-style: none; margin-top: 10px; line-height: 2;">
+            <h3 style="margin-top: 20px; font-size: 16px;">Popular Categories</h3>
+            <ul style="list-style: none; margin-top: 8px; line-height: 1.8; font-size: 14px;">
                 <li><a href="#" onclick="showCategory('Destinations')">🌏 Destinations</a></li>
                 <li><a href="#" onclick="showCategory('Travel Guides')">📖 Travel Guides</a></li>
                 <li><a href="#" onclick="showCategory('Budget Travel')">💰 Budget Travel</a></li>
@@ -142,18 +147,18 @@
                 <li><a href="#" onclick="showCategory('Travel Tips')">✈️ Travel Tips</a></li>
             </ul>
 
-            <!-- Ad Slot 3: Sidebar Bottom -->
-            <div class="ad-box ad-sidebar" style="margin-top:25px;">[ Ad Placeholder #3 - Sidebar Half-Page (300x600) ]</div>
+            <!-- Ad Slot 3 -->
+            <div class="ad-box ad-sidebar" style="margin-top:20px;">[ Ad Placeholder #3 - Sidebar (300x600) ]</div>
         </aside>
     </div>
 
-    <!-- Ad Slot 4: Pre-Footer Banner -->
-    <div class="ad-box ad-footer">[ Ad Placeholder #4 - Pre-Footer Banner (728x90) ]</div>
+    <!-- Ad Slot 4 -->
+    <div class="ad-box ad-footer">[ Ad Placeholder #4 - Pre-Footer Banner ]</div>
 
     <!-- Footer -->
     <footer>
         <div>
-            <!-- Bengali Ad Facebook Contact Button requested by user -->
+            <!-- Facebook Page Link Button -->
             <a href="https://facebook.com/your-page-link-here" target="_blank" class="footer-ad-link">
                 📢 বিজ্ঞাপনের জন্য যোগাযোগ করুন (ফেসবুক পেজ)
             </a>
@@ -163,11 +168,12 @@
             <a href="#" onclick="showPage('contact')">Contact Us</a> |
             <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
         </div>
-        <!-- Ad Slot 5: Footer Bottom Ad -->
-        <div class="ad-box" style="max-width:600px; margin: 10px auto; min-height:60px;">[ Ad Placeholder #5 - Footer Small Banner ]</div>
+        
+        <!-- Ad Slot 5 -->
+        <div class="ad-box" style="max-width:500px; margin: 10px auto; min-height:50px;">[ Ad Placeholder #5 - Footer Small Banner ]</div>
 
         <div class="footer-bottom">
-            &copy; 2026 Imran Blog. All Rights Reserved. Built for International Travelers.
+            &copy; 2026 Imran Blog. All Rights Reserved.
         </div>
     </footer>
 
@@ -175,19 +181,19 @@
     <div class="modal" id="adminModal">
         <div class="modal-content">
             <h3>Admin Panel Access</h3>
-            <p style="font-size:12px; color:#666; margin-bottom:15px;">Password is restricted to site admin only.</p>
+            <p style="font-size:12px; color:#666; margin-bottom:12px;">Password is restricted to site admin only.</p>
             <input type="password" id="adminPass" placeholder="Enter Admin Password">
             <button class="comment-btn" style="width:100%" onclick="checkAdminPass()">Login</button>
-            <button class="comment-btn" style="width:100%; background:#ccc; margin-top:5px;" onclick="closeModal()">Close</button>
+            <button class="comment-btn" style="width:100%; background:#ccc; margin-top:8px;" onclick="closeModal()">Close</button>
         </div>
     </div>
 
     <!-- Admin Dashboard Modal -->
     <div class="modal" id="adminDashboard">
-        <div class="modal-content" style="max-width: 700px;">
+        <div class="modal-content">
             <h2>Admin Control Panel</h2>
-            <p style="font-size: 13px; color: green; margin-bottom: 15px;">Authenticated as Admin</p>
-            <hr><br>
+            <p style="font-size: 12px; color: green; margin-bottom: 12px;">Authenticated as Admin</p>
+            <hr style="margin-bottom: 12px;"><br>
             <h4>Add New Travel Article</h4>
             <input type="text" id="newTitle" placeholder="Article Title">
             <select id="newCategory">
@@ -197,15 +203,14 @@
                 <option value="Food & Culture">Food & Culture</option>
                 <option value="Travel Tips">Travel Tips</option>
             </select>
-            <input type="text" id="newImage" placeholder="Image URL (e.g. https://images.unsplash.com/...)">
-            <textarea id="newContent" rows="8" placeholder="Full Article Content (HTML tags supported)"></textarea>
+            <input type="text" id="newImage" placeholder="Image URL">
+            <textarea id="newContent" rows="6" placeholder="Full Article Content"></textarea>
             <button class="comment-btn" style="background:var(--primary); width:100%;" onclick="addNewPost()">Publish Post</button>
-            <button class="comment-btn" style="background:red; width:100%; margin-top:10px;" onclick="logoutAdmin()">Logout</button>
+            <button class="comment-btn" style="background:red; width:100%; margin-top:8px;" onclick="logoutAdmin()">Logout</button>
         </div>
     </div>
 
     <script>
-        // Article Data (Full Real Articles)
         const articles = [
             {
                 id: 1,
@@ -213,33 +218,18 @@
                 category: "Destinations",
                 date: "October 24, 2026",
                 image: "https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?auto=format&fit=crop&w=800&q=80",
-                excerpt: "Explore the lush green countryside, pristine beaches, ancient archeological sites, and vibrant river basins of Bangladesh.",
+                excerpt: "Explore the lush green countryside, pristine beaches, ancient archeological sites, and vibrant river basins.",
                 content: `
-                    <p>Bangladesh is a hidden gem in South Asia, packed with natural beauty, rich history, and extraordinary warm hospitality. Here is a curated guide to the 10 best destinations you should explore on your trip.</p>
+                    <p>Bangladesh is a hidden gem in South Asia, packed with natural beauty, rich history, and extraordinary warm hospitality.</p>
                     <h2>1. Cox’s Bazar</h2>
-                    <p>Home to the longest natural sea beach in the world, stretching over 120 km. It offers breathtaking ocean sunsets, surf spots, and delicious fresh seafood markets.</p>
+                    <p>Home to the longest natural sea beach in the world, stretching over 120 km.</p>
                     <h2>2. The Sundarbans</h2>
-                    <p>The world's largest mangrove forest and a UNESCO World Heritage Site. Home to the Royal Bengal Tiger, estuarine crocodiles, and rare bird species.</p>
+                    <p>The world's largest mangrove forest and a UNESCO World Heritage Site, home to the Royal Bengal Tiger.</p>
                     <h2>3. Sreemangal</h2>
-                    <p>Known as the tea capital of Bangladesh. Endless rolling green hills covered in tea gardens, rain forests, and peaceful rubber plantations await you here.</p>
-                    <h2>4. Saint Martin’s Island</h2>
-                    <p>The only coral island in Bangladesh featuring crystal clear turquoise waters, coconut groves, and tranquil tropical island life.</p>
-                    <h2>5. Rangamati & Kaptai Lake</h2>
-                    <p>Situated in the Chittagong Hill Tracts, offering picturesque lake boat rides, indigenous Chakma village tours, and serene mountain vistas.</p>
-                    <h2>6. Sylhet & Jaflong</h2>
-                    <p>Renowned for stone collections along clear rivers flowing from the Meghalaya hills, breathtaking waterfalls, and lush greenery.</p>
-                    <h2>7. Paharpur (Somapura Mahavihara)</h2>
-                    <p>An ancient 8th-century Buddhist monastery complex showcasing extraordinary terracotta artwork and historic architectural heritage.</p>
-
-                    <!-- Ad Slot 6: In-Article Middle Ad -->
+                    <p>Known as the tea capital of Bangladesh, surrounded by endless rolling green hills.</p>
                     <div class="ad-box ad-in-article">[ Ad Placeholder #6 - In-Article Native Banner ]</div>
-
-                    <h2>8. Bandarban</h2>
-                    <p>High mountain peaks, sacred golden temples, cascading waterfalls like Nafakum, and trekking routes for adventure lovers.</p>
-                    <h2>9. Bagerhat Mosque City</h2>
-                    <p>A historic 15th-century Islamic architecture hub featuring the famous Sixty Dome Mosque (Shat Gombuj Masjid).</p>
-                    <h2>10. Old Dhaka</h2>
-                    <p>A bustling historic quarter full of Mughal architecture, chaotic street life, vibrant spice markets, and world-renowned Kacchi Biryani.</p>
+                    <h2>4. Saint Martin’s Island</h2>
+                    <p>The only coral island in Bangladesh featuring crystal clear turquoise waters.</p>
                 `
             },
             {
@@ -248,21 +238,13 @@
                 category: "Travel Guides",
                 date: "October 20, 2026",
                 image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
-                excerpt: "Everything you need to know about navigating the mangrove forests, wild tiger habitats, boat cruises, and safety tips.",
+                excerpt: "Everything you need to know about navigating mangrove forests, tiger habitats, and safety tips.",
                 content: `
-                    <p>The Sundarbans, spanning across Bangladesh and India, is one of the most enigmatic wilderness destinations on planet earth. Navigating this vast water labyrinth requires preparation and proper planning.</p>
+                    <p>The Sundarbans, spanning across Bangladesh and India, is one of the most enigmatic wilderness destinations.</p>
                     <h2>Best Time to Visit</h2>
-                    <p>The optimal season to visit is between November and February when the weather is cool, dry, and pleasant for long river cruises.</p>
+                    <p>Between November and February when the weather is cool and dry.</p>
                     <h2>How to Get There</h2>
-                    <p>Travelers usually fly or take a train to Khulna or Mongla, from where motorboat expeditions depart deep into the forest reserves.</p>
-                    <h2>Key Spots to Explore</h2>
-                    <ul>
-                        <li><b>Kotka Wildlife Sanctuary:</b> Deer watching, forest walking trails, and watchtowers.</li>
-                        <li><b>Kachikhali:</b> Secluded beaches and deep jungle walks.</li>
-                        <li><b>Harbaria Eco-Tourism Centre:</b> Easy wooden boardwalk trail through mangrove swamps.</li>
-                    </ul>
-                    <h2>Essential Travel Rules</h2>
-                    <p>Always travel with authorized wildlife guards, remain inside designated safety zones, avoid loud noises, and never litter in the sanctuary.</p>
+                    <p>Travelers take a train or bus to Khulna or Mongla, then board river cruises.</p>
                 `
             },
             {
@@ -271,15 +253,11 @@
                 category: "Budget Travel",
                 date: "October 18, 2026",
                 image: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80",
-                excerpt: "Smart insider strategies for affordable transport, low-cost local dining, and cheap accommodation options.",
+                excerpt: "Smart insider strategies for affordable transport, low-cost dining, and cheap accommodation.",
                 content: `
-                    <p>Bangladesh is one of the most budget-friendly destinations in South Asia. With smart planning, you can explore the country for under $20-$30 USD per day easily.</p>
+                    <p>Bangladesh is exceptionally budget-friendly. You can explore easily for under $20-$30 per day.</p>
                     <h2>1. Transport Hacks</h2>
-                    <p>Use Bangladesh Railway trains for long distances—first-class or AC chair seats are comfortable and extremely cheap. For river journeys, overnight launch cabins offer great budget luxury.</p>
-                    <h2>2. Affordable Local Eats</h2>
-                    <p>Skip Western style cafes and try local eateries. Traditional meals like Paratha with Daal for breakfast, or Bhortas with Rice for lunch cost only $1 to $2 per meal.</p>
-                    <h2>3. Accommodation</h2>
-                    <p>Choose local guesthouses or government tourist lodges (Parjatan Motels) which offer clean standard rooms at very low costs compared to international hotel chains.</p>
+                    <p>Use Bangladesh Railway trains for long distances and river launches for overnight trips.</p>
                 `
             },
             {
@@ -288,15 +266,11 @@
                 category: "Destinations",
                 date: "October 15, 2026",
                 image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
-                excerpt: "From Ubud's lush rice terraces to Uluwatu's dramatic cliffside temples, discover Bali's top highlights.",
+                excerpt: "From Ubud's lush rice terraces to Uluwatu's dramatic cliffside temples.",
                 content: `
-                    <p>Bali, Indonesia is a tropical paradise known for volcanic mountains, iconic rice paddies, beaches, and coral reefs. If you are visiting for the first time, make sure these places are on your itinerary.</p>
+                    <p>Bali, Indonesia is a tropical paradise known for volcanic mountains and pristine beaches.</p>
                     <h2>Ubud: The Cultural Heart</h2>
-                    <p>Surrounded by rainforests and terraced rice paddies, Ubud is famous for traditional crafts, dance performances, yoga retreats, and the sacred Monkey Sanctuary.</p>
-                    <h2>Uluwatu Temple</h2>
-                    <p>Perched high on a steep cliff 70 meters above the sea, offering breathtaking sunset views and traditional Kecak Fire Dance performances.</p>
-                    <h2>Nusa Penida</h2>
-                    <p>Take a 45-minute speedboat from Bali mainland to visit the iconic Kelingking T-Rex Beach and Broken Beach for world-class photography spots.</p>
+                    <p>Famous for traditional crafts, dance performances, and monkey sanctuaries.</p>
                 `
             },
             {
@@ -305,25 +279,20 @@
                 category: "Travel Tips",
                 date: "October 10, 2026",
                 image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
-                excerpt: "A step-by-step masterclass covering passport validity, visa checks, flight bookings, foreign exchange, and packing essentials.",
+                excerpt: "A step-by-step masterclass covering passport validity, visa checks, and packing essentials.",
                 content: `
-                    <p>Planning your first overseas journey can feel overwhelming. Following this simple checklist will ensure a smooth, hassle-free international travel experience.</p>
-                    <h2>Step 1: Passport & Visa Documentation</h2>
-                    <p>Ensure your passport has at least 6 months of validity remaining from your return date. Check if your destination offers Visa on Arrival, eVisa, or requires a sticker visa in advance.</p>
-                    <h2>Step 2: Travel Insurance</h2>
-                    <p>Never fly abroad without valid medical and travel insurance. It covers trip cancellations, lost baggage, and unexpected medical emergency expenses.</p>
-                    <h2>Step 3: Currency & Payments</h2>
-                    <p>Inform your bank about international travel to prevent credit cards from getting blocked. Always carry a small amount of local currency or USD for immediate airport transport.</p>
+                    <p>Planning your first overseas journey requires proper checklist preparation.</p>
+                    <h2>Step 1: Documentation</h2>
+                    <p>Ensure your passport has at least 6 months validity remaining.</p>
                 `
             }
         ];
 
-        // System state
         let currentArticles = [...articles];
         let likes = { 1: 15, 2: 8, 3: 12, 4: 25, 5: 30 };
         let comments = {
-            1: ["Great article! Super helpful for visiting Bangladesh.", "Saint Martin is truly beautiful!"],
-            2: ["The boat cruise tips are very useful, thanks!"],
+            1: ["Great article! Super helpful."],
+            2: ["Very informative guide."],
             3: [], 4: [], 5: []
         };
 
@@ -331,7 +300,7 @@
             return `
                 <div class="hero">
                     <h1>Explore The World With Imran Blog</h1>
-                    <p>Detailed travel guides, budget tips, authentic cultural insights & honest advice.</p>
+                    <p>Detailed travel guides, budget tips & authentic cultural insights.</p>
                 </div>
             `;
         }
@@ -339,7 +308,6 @@
         function showCategory(cat) {
             const contentArea = document.getElementById('content-area');
             let filtered = cat === 'all' ? currentArticles : currentArticles.filter(a => a.category === cat);
-            
             let html = renderHero();
 
             filtered.forEach((art) => {
@@ -364,7 +332,6 @@
         function openPost(id) {
             const art = currentArticles.find(a => a.id === id);
             const contentArea = document.getElementById('content-area');
-
             let artComments = comments[id] || [];
             let commentListHtml = artComments.map(c => `<div class="comment-item">💬 ${c}</div>`).join('');
 
@@ -376,14 +343,13 @@
                     </div>
                     <h1>${art.title}</h1>
                     <img src="${art.image}" alt="${art.title}">
-                    
                     <div>${art.content}</div>
 
                     <div class="post-actions">
                         <button class="like-btn" onclick="addLike(${art.id})">❤️ Like (<span id="like-count">${likes[art.id] || 0}</span>)</button>
                         <div>
-                            <span>Rate Article: </span>
-                            <span class="star-rating" onclick="rateArticle()">⭐⭐⭐⭐⭐</span>
+                            <span style="font-size:13px;">Rate: </span>
+                            <span class="star-rating" onclick="alert('Thanks for rating 5 stars!')">⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
 
@@ -391,7 +357,6 @@
                         <h3>Leave a Comment</h3>
                         <input type="text" id="commentInput" class="comment-input" placeholder="Write a comment...">
                         <button class="comment-btn" onclick="addComment(${art.id})">Post Comment</button>
-                        
                         <div class="comment-list" id="commentList">
                             ${commentListHtml}
                         </div>
@@ -406,18 +371,12 @@
             document.getElementById('like-count').innerText = likes[id];
         }
 
-        function rateArticle() {
-            alert("Thank you for rating this article 5 stars!");
-        }
-
         function addComment(id) {
             const input = document.getElementById('commentInput');
             if (input.value.trim() !== '') {
                 if(!comments[id]) comments[id] = [];
                 comments[id].push(input.value.trim());
-                
-                const commentList = document.getElementById('commentList');
-                commentList.innerHTML += `<div class="comment-item">💬 ${input.value.trim()}</div>`;
+                document.getElementById('commentList').innerHTML += `<div class="comment-item">💬 ${input.value.trim()}</div>`;
                 input.value = '';
             }
         }
@@ -425,52 +384,28 @@
         function showPage(page) {
             const contentArea = document.getElementById('content-area');
             if(page === 'about') {
-                contentArea.innerHTML = `
-                    <div class="post-detail">
-                        <h1>About Imran Blog</h1>
-                        <p>Welcome to Imran Blog—your trusted destination for authentic, detailed, and inspiring international travel guides, itinerary suggestions, and cultural tips.</p>
-                        <p>Our mission is to help globetrotters plan seamless budget and luxury trips across Bangladesh, Asia, and beyond.</p>
-                    </div>
-                `;
+                contentArea.innerHTML = `<div class="post-detail"><h1>About Us</h1><p>Welcome to Imran Blog—your trusted destination for authentic international travel guides and tips.</p></div>`;
             } else if(page === 'contact') {
-                contentArea.innerHTML = `
-                    <div class="post-detail">
-                        <h1>Contact Us</h1>
-                        <p>Have questions, travel stories, or sponsorship inquiries? Reach out to us!</p>
-                        <br>
-                        <p><b>Email:</b> contact@imranblog.com</p>
-                        <p><b>Facebook Advertising:</b> Contact via our official Facebook page link in the footer.</p>
-                    </div>
-                `;
+                contentArea.innerHTML = `<div class="post-detail"><h1>Contact Us</h1><p>Email: contact@imranblog.com</p><p>For ads, check our Facebook page link in the footer.</p></div>`;
             } else if(page === 'privacy') {
-                contentArea.innerHTML = `
-                    <div class="post-detail">
-                        <h1>Privacy Policy</h1>
-                        <p>At Imran Blog, accessible from www.imranblog.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Imran Blog and how we use it.</p>
-                        <p>We use standard cookies and third-party advertising services to serve relevant Ads to visitors.</p>
-                    </div>
-                `;
+                contentArea.innerHTML = `<div class="post-detail"><h1>Privacy Policy</h1><p>We respect visitor privacy and use standard cookies for advertising.</p></div>`;
             }
         }
 
-        // Admin Security & Controls
         function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
         function closeModal() { document.getElementById('adminModal').style.display = 'none'; }
         
         function checkAdminPass() {
-            const pass = document.getElementById('adminPass').value;
-            if(pass === 'Imran123@') {
+            if(document.getElementById('adminPass').value === 'Imran123@') {
                 closeModal();
                 document.getElementById('adminDashboard').style.display = 'flex';
                 document.getElementById('adminPass').value = '';
             } else {
-                alert('Access Denied: Incorrect Admin Password!');
+                alert('Incorrect Admin Password!');
             }
         }
 
-        function logoutAdmin() {
-            document.getElementById('adminDashboard').style.display = 'none';
-        }
+        function logoutAdmin() { document.getElementById('adminDashboard').style.display = 'none'; }
 
         function addNewPost() {
             const title = document.getElementById('newTitle').value;
@@ -479,16 +414,12 @@
             const content = document.getElementById('newContent').value;
 
             if(title && content) {
-                const newArticle = {
+                currentArticles.unshift({
                     id: currentArticles.length + 1,
-                    title: title,
-                    category: category,
-                    date: "Just Now",
-                    image: image,
-                    excerpt: content.substring(0, 100) + '...',
-                    content: `<p>${content.replace(/\n/g, '</p><p>')}</p>`
-                };
-                currentArticles.unshift(newArticle);
+                    title, category, date: "Just Now", image,
+                    excerpt: content.substring(0, 90) + '...',
+                    content: `<p>${content}</p>`
+                });
                 alert('Article Published Successfully!');
                 logoutAdmin();
                 showCategory('all');
@@ -497,7 +428,6 @@
             }
         }
 
-        // Initial Load
         showCategory('all');
     </script>
 </body>
